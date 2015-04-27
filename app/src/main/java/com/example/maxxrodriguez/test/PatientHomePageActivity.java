@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 
 public class PatientHomePageActivity extends ActionBarActivity {
@@ -14,6 +17,14 @@ public class PatientHomePageActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_home_page);
+
+        // Construct the data source
+        ArrayList<Report> arrayOfReports = Report.getReports();
+        // Create the adapter to convert the array to views
+        ReportsAdapter adapter = new ReportsAdapter(this, arrayOfReports);
+        // Attach the adapter to a ListView
+        ListView listView2 = (ListView)findViewById(R.id.listView2);
+        listView2.setAdapter(adapter);
     }
 
 
@@ -46,16 +57,12 @@ public class PatientHomePageActivity extends ActionBarActivity {
     }
 
     //@Override
-    /** protected void onActivityResult(Intent data) {
+    /*protected void onActivityResult(Intent data) {
      // Check which request we're responding to
      if (requestCode == PICK_CONTACT_REQUEST) {
      // Make sure the request was successful
      if (resultCode == RESULT_OK) {
      // The user picked a contact.
      // The Intent's data Uri identifies which contact was selected.
-
-     // Do something with the contact here (bigger example below)
-     }
-     }
      }*/
 }
