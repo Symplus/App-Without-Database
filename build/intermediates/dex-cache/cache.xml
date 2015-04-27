@@ -2,32 +2,32 @@
 <items version="2" >
 
     <item
-        jar="/Users/maxxrodriguez/AndroidStudioProjects/App-Without-Database/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="/Users/maxxrodriguez/AndroidStudioProjects/App-Without-Database/app/build/intermediates/pre-dexed/debug/classes-ceef61b1efbcd50fc37004fdaf6ec2272c2ece36.jar" />
-    </item>
-    <item
-        jar="/Users/maxxrodriguez/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jar="C:\Users\Corey\AppData\Local\Android\sdk1\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="/Users/maxxrodriguez/AndroidStudioProjects/App-Without-Database/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-87ae79aae875193ae669edc0661dae047089c51d.jar" />
+        <dex dex="C:\Users\Corey\AndroidStudioProjects\App-Without-Database\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-018f795b5dfcc935f6d42d4494be119e25980066.jar" />
     </item>
     <item
-        jar="/Users/maxxrodriguez/AndroidStudioProjects/App-Without-Database/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jar="C:\Users\Corey\AndroidStudioProjects\App-Without-Database\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\Corey\AndroidStudioProjects\App-Without-Database\app\build\intermediates\pre-dexed\debug\classes-c6ee07e2de4b8743a644f43051ece26e81947d53.jar" />
+    </item>
+    <item
+        jar="C:\Users\Corey\AndroidStudioProjects\App-Without-Database\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="/Users/maxxrodriguez/AndroidStudioProjects/App-Without-Database/app/build/intermediates/pre-dexed/debug/classes-831c77638d8afbcce275c1ecd65ad4e1297ed2e7.jar" />
+        <dex dex="C:\Users\Corey\AndroidStudioProjects\App-Without-Database\app\build\intermediates\pre-dexed\debug\classes-cd1655f3000c1dd060789dc2c3d069031ecff8e6.jar" />
     </item>
     <item
-        jar="/Users/maxxrodriguez/AndroidStudioProjects/App-Without-Database/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jar="C:\Users\Corey\AndroidStudioProjects\App-Without-Database\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="/Users/maxxrodriguez/AndroidStudioProjects/App-Without-Database/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-e26bd8b4cfbe2493294899e2fb4adb9cf2a331ba.jar" />
+        <dex dex="C:\Users\Corey\AndroidStudioProjects\App-Without-Database\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-41c2409117a880579ab6eebc0d6ee7143fba8ea9.jar" />
     </item>
 
 </items>

@@ -31,11 +31,12 @@ public class ReportsAdapter extends ArrayAdapter<Report> {
         }
         // Lookup view for data population
 
-        TextView nauseaLevel = (TextView) convertView.findViewById(R.id.nausea);
-        TextView headacheLevel = (TextView) convertView.findViewById(R.id.headache);
+        TextView ReportNum = (TextView) convertView.findViewById(R.id.report_number);
+        TextView ReportInfo = (TextView) convertView.findViewById(R.id.report_info);
         // Populate the data into the template view using the data object
-        nauseaLevel.setText(Integer.toString(newreport.nausea));
-        headacheLevel.setText(Integer.toString(newreport.headache));
+        ReportNum.setText("Report " + Integer.toString(newreport.number));
+        ReportInfo.setText("Headache: " + Integer.toString(newreport.headache) + "  Nausea: " + Integer.toString(newreport.nausea) + "  Chest Pain: " + Integer.toString(newreport.chestpain) + "  Achiness: " + Integer.toString(newreport.achiness));
+
         // Return the completed view to render on screen
         return convertView;
     }

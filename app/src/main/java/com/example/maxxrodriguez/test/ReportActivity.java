@@ -129,7 +129,7 @@ public class ReportActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    Report newReport = new Report(progress1, progress2, progress3, progress4);
+    Report newReport = new Report(0, progress1, progress2, progress3, progress4);
 
 
     public void activityFinish(View view)

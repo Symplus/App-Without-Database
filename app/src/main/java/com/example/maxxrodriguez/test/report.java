@@ -7,12 +7,13 @@ import java.util.ArrayList;
  */
 public class Report {
 
-    public int nausea, headache, chestpain, achiness, number, counter = 0;
+    public int nausea, headache, chestpain, achiness, number =0;
     public String n, head = "";
+    public static int  counter = 1;
 
-    public Report(int n, int h, int cp, int a)
+    public Report(int num, int n, int h, int cp, int a)
     {
-        number = 0;
+        number = num;
         nausea = n;
         headache = h;
         chestpain = cp;
@@ -29,7 +30,8 @@ public class Report {
     public static ArrayList<Report> getReports() {
         ArrayList<Report> reports = new ArrayList<Report>();
 
-        reports.add(new Report(4,3));
+        reports.add(new Report(counter,4,3,2,10));
+        reports.add(new Report(counter++,10,10,10,10));
 
         return reports;
     }

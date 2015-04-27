@@ -1,27 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
-
+    android:layout_height="150dp">
 
     <TextView
-        android:id="@+id/nausea"
+        android:id="@+id/report_number"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
+        android:layout_height="48dp"
+        android:text="Report 0"
+        android:textSize="20sp"
+        android:textColor="@color/Patient_base"
         android:textAppearance="?android:attr/textAppearanceListItemSmall"
         android:gravity="center_vertical"
-        android:minHeight="?android:attr/listPreferredItemHeightSmall" />/>
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:paddingLeft="@dimen/abc_action_bar_default_padding_material"/>
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
     <TextView
-        android:id="@+id/headache"
+        android:id="@+id/report_info"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
+        android:layout_height="48dp"
+        android:text="Nausea:0"
         android:textAppearance="?android:attr/textAppearanceListItemSmall"
         android:gravity="center_vertical"
-        android:minHeight="?android:attr/listPreferredItemHeightSmall" />/>
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:paddingLeft="@dimen/abc_action_bar_default_padding_material"/>
+
+</RelativeLayout>
 
 
 

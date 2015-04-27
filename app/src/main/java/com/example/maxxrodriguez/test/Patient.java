@@ -38,7 +38,7 @@ public class Patient {
 
     public static ArrayList<Patient> getPatients() {
         ArrayList<Patient> patients = new ArrayList<Patient>();
-        for(int i= 0; i<50 ; i++)
+        for(int i= 0; i<20 ; i++)
         {
             patients.add(new Patient("Harry"+i));
         }
