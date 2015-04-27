@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Symplus</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_patient_login">Patient Login</string>
+    <string name="title_activity_doctor_login">Doctor Login</string>
+    <string name="title_activity_create_patient_ui">New Patient</string>
+    <string name="title_activity_create_doctor_ui">New Doctor</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="name">First and Last Name</string>
+    <string name="dob">Date of Birth (MM/DD/YYYY)</string>
+    <string name="docID">Doctor Identification Number</string>
+    <string name="email">Email Address</string>
+    <string name="password">Password</string>
+    <string name="title_activity_patient_home_page">Welcome</string>
+    <string name="title_activity_doctor_home_page">Patient List</string>
+    <string name="patient_sign_in">Sign in as Patient</string>
+    <string name="doctor_sign_in">Sign in as Doctor</string>
+    <string name="new_patient">New Patient</string>
+    <string name="existing_patient">Existing Patient</string>
+    <string name="new_doctor">New Doctor</string>
+    <string name="existing_doctor">Existing Doctor</string>
+    <string name="enter_information">Enter your information</string>
+    <string name="continue_button">Continue</string>
+    <string name="hospital_name">Hospital Name</string>
+    <string name="title_activity_report">Symptom Report</string>
+
+</resources>

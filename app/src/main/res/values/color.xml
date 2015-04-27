@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Patient_base">#ffE53935</color>
+    <color name="Doctor_base">#ff1E88E5</color>
+    </resources>
