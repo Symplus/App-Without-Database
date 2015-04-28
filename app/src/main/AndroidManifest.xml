@@ -48,6 +48,14 @@
             android:name=".patient_reports"
             android:label="@string/title_activity_patient_reports" >
         </activity>
+        <activity
+            android:name=".existing_patient_ui"
+            android:label="@string/title_activity_existing_patient_ui" >
+        </activity>
+        <activity
+            android:name=".ExistingPatientUI"
+            android:label="@string/title_activity_existing_patient_ui" >
+        </activity>
     </application>
 
 </manifest>

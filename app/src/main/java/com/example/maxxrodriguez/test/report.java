@@ -38,9 +38,9 @@ public class Report {
         return reports;
     }
 
-    public static void addReport(Report report)
+    public static void addReport(Report report, ArrayList<Report> patientReports)
     {
         num++;
-        reports.add(report);
+        patientReports.add(report);
     }
 }

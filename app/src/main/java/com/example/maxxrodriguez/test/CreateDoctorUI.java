@@ -46,14 +46,19 @@ public class CreateDoctorUI extends ActionBarActivity{
         Intent intent = new Intent(this, DoctorHomePageActivity.class); //All of this code extracts the data the user will write in the text fields
         EditText editText = (EditText) findViewById(R.id.FnLtext);
         String name = editText.getText().toString();
+
         EditText editText2 = (EditText) findViewById(R.id.dobText);
-        String dob = editText.getText().toString();
-        EditText editText4 = (EditText) findViewById(R.id.emailText);
-        String email = editText.getText().toString();
-        EditText editText5 = (EditText) findViewById(R.id.passwordText);
-        String password = editText.getText().toString();
-        EditText editText6 = (EditText) findViewById(R.id.hospitalText);
-        String hospital = editText.getText().toString();
+        String dob = editText2.getText().toString();
+
+        EditText editText3 = (EditText) findViewById(R.id.emailText);
+        String email = editText3.getText().toString();
+
+        EditText editText4 = (EditText) findViewById(R.id.passwordText);
+        String password = editText4.getText().toString();
+
+        EditText editText5 = (EditText) findViewById(R.id.hospitalText);
+        String hospital = editText5.getText().toString();
+
         Doctor doctor = new Doctor(name, dob, email, password, hospital);
         startActivity(intent);
     }

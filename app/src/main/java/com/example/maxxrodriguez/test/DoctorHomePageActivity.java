@@ -75,7 +75,7 @@ public class DoctorHomePageActivity extends ActionBarActivity implements Adapter
 
         Toast.makeText(getApplicationContext(),"Position: "+position,Toast.LENGTH_LONG).show();
 
-        if(MainActivity.PatientMap.containsValue(arrayOfPatients.get(position)))
+        if(MainActivity.PatientMap.containsKey(arrayOfPatients.get(position)))
         {
             currentReports = MainActivity.PatientMap.get(arrayOfPatients.get(position));
         }
