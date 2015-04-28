@@ -8,4 +8,5 @@
         android:layout_height="wrap_content"
         android:id="@+id/listView3"
         android:layout_centerHorizontal="true"/>
+
 </LinearLayout>

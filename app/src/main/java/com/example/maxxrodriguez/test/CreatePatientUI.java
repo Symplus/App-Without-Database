@@ -16,6 +16,7 @@ public class CreatePatientUI extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_patient_ui);
         Report.initList();
+
     }
 
 
@@ -53,16 +54,11 @@ public class CreatePatientUI extends ActionBarActivity {
         String email = editText.getText().toString();
         EditText editText5 = (EditText) findViewById(R.id.passwordText);
         String password = editText.getText().toString();
-        if(docID == "")                                                 //If the patient does not provide a doctor ID then we'll account for that
-        {
-            Patient newPatient = new Patient(name,dob,email,password);
 
-        }
-        else
-        {
-            Patient newPatient = new Patient(name,dob,docID,email,password);
-
-        }
+        Patient newPatient = new Patient(name,dob,docID,email,password);
+        Patient.addPatient(newPatient);
+        MainActivity.addToPatientMap(newPatient,Report.getReports());
+        finish();
         startActivity(intent);
     }
 }

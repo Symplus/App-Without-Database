@@ -18,6 +18,7 @@ public class CreateDoctorUI extends ActionBarActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_doctor_ui);
+
     }
 
     @Override

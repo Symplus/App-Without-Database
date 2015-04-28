@@ -28,6 +28,11 @@ public class Report {
         reports = new ArrayList<Report>();
     }
 
+    public static void setReports(ArrayList<Report> newReport)
+    {
+        reports = newReport;
+    }
+
     public static ArrayList<Report> getReports() {
 
         return reports;

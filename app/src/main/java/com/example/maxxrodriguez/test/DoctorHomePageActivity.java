@@ -4,18 +4,24 @@ package com.example.maxxrodriguez.test;
  * Created by Corey on 3/29/2015.
  */
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 
-public class DoctorHomePageActivity extends ActionBarActivity{
+public class DoctorHomePageActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
 
+    ArrayList<Patient> arrayOfPatients;
+    static ArrayList<Report> currentReports;
 
 
 
@@ -23,16 +29,22 @@ public class DoctorHomePageActivity extends ActionBarActivity{
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_home_page);
+        init();
 
         // Construct the data source
-        ArrayList<Patient> arrayOfUsers = Patient.getPatients();
+
         // Create the adapter to convert the array to views
-        PatientsAdapter adapter = new PatientsAdapter(this, arrayOfUsers);
+        PatientsAdapter adapter = new PatientsAdapter(this, arrayOfPatients);
         // Attach the adapter to a ListView
         ListView listView1 = (ListView)findViewById(R.id.listView);
         listView1.setAdapter(adapter);
 
-    }
+        listView1.setOnItemClickListener(this);
+
+      //  listView1.setOnItemClickListener(new OnItemClickListener(){
+
+
+        }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -54,6 +66,27 @@ public class DoctorHomePageActivity extends ActionBarActivity{
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+        Intent intent = new Intent(this,patient_reports.class);
+
+        Toast.makeText(getApplicationContext(),"Position: "+position,Toast.LENGTH_LONG).show();
+
+        if(MainActivity.PatientMap.containsValue(arrayOfPatients.get(position)))
+        {
+            currentReports = MainActivity.PatientMap.get(arrayOfPatients.get(position));
+        }
+
+        startActivity(intent);
+    }
+
+    public void init()
+    {
+        arrayOfPatients = Patient.getPatients();
+        currentReports = new ArrayList<Report>();
     }
 
 }

@@ -9,6 +9,8 @@ import java.util.ArrayList;
 public class Patient {
 
     public String name, dob, emailAddress, docID, password = ""; //basic info for a patient, results has not been implemented yet
+    static ArrayList<Patient> patients;
+
 
     public Patient(String n, String birth, String email, String pass) //DocId not provided
     {
@@ -29,19 +31,24 @@ public class Patient {
 
     }
 
-    public Patient(String n)
-    {
+    public Patient(String n) {
         name = n;
     }
 
-    public Patient(){}
+    public Patient() {
+    }
+
+    public static void initListPatient()
+    {
+        patients = new ArrayList<Patient>();
+    }
 
     public static ArrayList<Patient> getPatients() {
-        ArrayList<Patient> patients = new ArrayList<Patient>();
-        for(int i= 0; i<20 ; i++)
-        {
-            patients.add(new Patient("Harry"+i));
-        }
+
         return patients;
+    }
+
+    public static void addPatient(Patient patient) {
+        patients.add(patient);
     }
 }

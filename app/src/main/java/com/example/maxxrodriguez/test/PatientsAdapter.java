@@ -1,15 +1,15 @@
 package com.example.maxxrodriguez.test;
 
-import android.content.Context;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.SeekBar;
-import android.widget.TextView;
-import android.app.Activity;
-import java.util.ArrayList;
+        import android.content.Context;
+        import android.view.LayoutInflater;
+        import android.view.View;
+        import android.view.ViewGroup;
+        import android.widget.ArrayAdapter;
+        import android.widget.ListView;
+        import android.widget.SeekBar;
+        import android.widget.TextView;
+        import android.app.Activity;
+        import java.util.ArrayList;
 
 /**
  * Created by Corey on 4/26/2015.

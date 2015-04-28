@@ -25,5 +25,6 @@
     <string name="continue_button">Continue</string>
     <string name="hospital_name">Hospital Name</string>
     <string name="title_activity_report">Symptom Report</string>
+    <string name="title_activity_patient_reports">Patient Reports</string>
 
 </resources>

@@ -25,6 +25,8 @@ public class PatientHomePageActivity extends ActionBarActivity {
         // Attach the adapter to a ListView
         ListView listView2 = (ListView)findViewById(R.id.listView2);
         listView2.setAdapter(adapter);
+
+
     }
 
 
