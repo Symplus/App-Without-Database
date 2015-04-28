@@ -35,7 +35,7 @@ public class ReportsAdapter extends ArrayAdapter<Report> {
         TextView ReportInfo = (TextView) convertView.findViewById(R.id.report_info);
         // Populate the data into the template view using the data object
         ReportNum.setText("Report " + Integer.toString(newreport.number));
-        ReportInfo.setText("Headache: " + Integer.toString(newreport.headache) + "  Nausea: " + Integer.toString(newreport.nausea) + "  Chest Pain: " + Integer.toString(newreport.chestpain) + "  Achiness: " + Integer.toString(newreport.achiness));
+        ReportInfo.setText("Nausea: " + Integer.toString(newreport.nausea) + "  Headache: " + Integer.toString(newreport.headache) + "  Chest Pain: " + Integer.toString(newreport.chestpain) + "  Achiness: " + Integer.toString(newreport.achiness));
 
         // Return the completed view to render on screen
         return convertView;

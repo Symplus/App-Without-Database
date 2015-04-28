@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class PatientHomePageActivity extends ActionBarActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public  void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_home_page);
 
@@ -54,6 +54,7 @@ public class PatientHomePageActivity extends ActionBarActivity {
     {
         Intent intent = new Intent(this, ReportActivity.class);
         startActivityForResult(intent,1);
+        finish();
     }
 
     //@Override

@@ -1,5 +1,6 @@
 package com.example.maxxrodriguez.test;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -7,7 +8,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
-import android.widget.Toast;
 import android.widget.TextView;
 
 
@@ -24,6 +24,8 @@ public class ReportActivity extends ActionBarActivity {
     public TextView textView3;
     public TextView textView4;
     int progress1, progress2, progress3, progress4 = 0;
+
+
 
 
     @Override
@@ -129,11 +131,14 @@ public class ReportActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    Report newReport = new Report(0, progress1, progress2, progress3, progress4);
 
 
     public void activityFinish(View view)
     {
+        Intent intent = new Intent(this, PatientHomePageActivity.class);
+        Report newReport = new Report( progress1, progress2, progress3, progress4);
+        Report.addReport(newReport);
         finish();
+        startActivity(intent);
     }
 }
