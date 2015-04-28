@@ -35,5 +35,4 @@ public class Report {
 
         return reports;
     }
-
 }
