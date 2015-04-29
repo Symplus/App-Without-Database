@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -22,6 +23,7 @@ public class DoctorHomePageActivity extends ActionBarActivity implements Adapter
 
     ArrayList<Patient> arrayOfPatients;
     static ArrayList<Report> currentReports;
+    TextView doctor_id;
 
 
 
@@ -40,8 +42,8 @@ public class DoctorHomePageActivity extends ActionBarActivity implements Adapter
         listView1.setAdapter(adapter);
 
         listView1.setOnItemClickListener(this);
-
-      //  listView1.setOnItemClickListener(new OnItemClickListener(){
+        doctor_id = (TextView)findViewById(R.id.doctor_id);
+        doctor_id.setText("Your ID: " + DoctorLoginActivity.currentID);
 
 
         }
@@ -72,8 +74,6 @@ public class DoctorHomePageActivity extends ActionBarActivity implements Adapter
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
         Intent intent = new Intent(this,patient_reports.class);
-
-        Toast.makeText(getApplicationContext(),"Position: "+position,Toast.LENGTH_LONG).show();
 
         if(MainActivity.PatientMap.containsKey(arrayOfPatients.get(position)))
         {

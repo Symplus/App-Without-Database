@@ -17,7 +17,7 @@ import java.util.Map;
 public class MainActivity extends ActionBarActivity{
 
     public static Map<Patient,ArrayList<Report>> PatientMap; //will have patients and their reports
-    public static Map<Doctor,String> DoctorMap; // will have doctors and patient names
+    public static Map<Doctor,ArrayList<Patient> DoctorMap; // will have doctors and patient names
 
 
     @Override
@@ -26,6 +26,7 @@ public class MainActivity extends ActionBarActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Patient.initListPatient();
+        Doctor.initListDoctor();
         mapInit();
 
     }

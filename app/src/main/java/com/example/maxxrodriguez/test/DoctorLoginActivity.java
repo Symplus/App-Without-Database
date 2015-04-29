@@ -16,13 +16,13 @@ import java.util.ArrayList;
 
 public class DoctorLoginActivity extends ActionBarActivity{
 
-
+    static int currentID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_login);
-        Intent intent  = getIntent();
+        init();
     }
 
 
@@ -53,5 +53,16 @@ public class DoctorLoginActivity extends ActionBarActivity{
         Intent intent = new Intent(this, CreateDoctorUI.class);
         startActivity(intent);
 
+    }
+
+    public void ExistingDoctor(View view)
+    {
+        Intent intent = new Intent(this, ExistingDoctorUI.class);
+        startActivity(intent);
+    }
+
+    public void init()
+    {
+        currentID = 0;
     }
 }

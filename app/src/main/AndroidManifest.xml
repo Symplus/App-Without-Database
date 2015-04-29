@@ -56,6 +56,10 @@
             android:name=".ExistingPatientUI"
             android:label="@string/title_activity_existing_patient_ui" >
         </activity>
+        <activity
+            android:name=".ExistingDoctorUI"
+            android:label="@string/title_activity_existing_doctor_ui" >
+        </activity>
     </application>
 
 </manifest>

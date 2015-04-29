@@ -19,7 +19,6 @@ public class CreatePatientUI extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_patient_ui);
-        Report.initList();
 
     }
 
@@ -47,6 +46,8 @@ public class CreatePatientUI extends ActionBarActivity {
     }
     public void createPatient(View view) //ignore everything above this line, this method takes you to the next activity on button press
     {
+        Report.initList();
+
         Intent intent = new Intent(this, PatientHomePageActivity.class); //All of this code extracts the data the user will write in the text fields
         EditText editText = (EditText) findViewById(R.id.FnLtext);
         String name = editText.getText().toString();

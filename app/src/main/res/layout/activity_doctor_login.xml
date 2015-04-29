@@ -30,7 +30,7 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:background="@color/Doctor_base"
-        android:clickable="false"
+        android:onClick="ExistingDoctor"
         android:elegantTextHeight="false"
         android:textColor="#ffffffff"
         android:padding="@dimen/activity_horizontal_margin" />

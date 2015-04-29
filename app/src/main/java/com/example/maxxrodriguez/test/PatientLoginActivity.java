@@ -7,14 +7,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import java.util.ArrayList;
+
 
 public class PatientLoginActivity extends ActionBarActivity  {
+
+    static ArrayList<Report> current;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_login);
-        Intent intent  = getIntent();
+        init();
     }
 
 
@@ -44,5 +48,16 @@ public class PatientLoginActivity extends ActionBarActivity  {
     {
         Intent intent = new Intent(this, CreatePatientUI.class);
         startActivity(intent);
+    }
+    
+    public void existingPatient(View v)
+    {
+        Intent intent = new Intent(this, ExistingPatientUI.class);
+        startActivity(intent);
+    }
+
+    public void init()
+    {
+        current = new ArrayList<Report>();
     }
 }

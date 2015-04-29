@@ -60,6 +60,9 @@ public class CreateDoctorUI extends ActionBarActivity{
         String hospital = editText5.getText().toString();
 
         Doctor doctor = new Doctor(name, dob, email, password, hospital);
+
+        DoctorLoginActivity.currentID = doctor.id;
+        Doctor.addDoctor(doctor);
         startActivity(intent);
     }
 }

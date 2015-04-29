@@ -26,6 +26,7 @@
     <string name="hospital_name">Hospital Name</string>
     <string name="title_activity_report">Symptom Report</string>
     <string name="title_activity_patient_reports">Patient Reports</string>
-    <string name="title_activity_existing_patient_ui">existing_patient_ui</string>
+    <string name="title_activity_existing_patient_ui">Existing Patient</string>
+    <string name="title_activity_existing_doctor_ui">ExistingDoctorUI</string>
 
 </resources>

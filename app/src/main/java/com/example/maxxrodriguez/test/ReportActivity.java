@@ -138,7 +138,7 @@ public class ReportActivity extends ActionBarActivity {
         Intent intent = new Intent(this, PatientHomePageActivity.class);
         Report newReport = new Report( progress1, progress2, progress3, progress4);
         Report.addReport(newReport,CreatePatientUI.patientReports);
-
+        PatientLoginActivity.current = CreatePatientUI.patientReports;
         finish();
         startActivity(intent);
     }

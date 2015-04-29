@@ -19,7 +19,7 @@ public class PatientHomePageActivity extends ActionBarActivity {
         setContentView(R.layout.activity_patient_home_page);
 
         // Construct the data source
-        ArrayList<Report> arrayOfReports = CreatePatientUI.patientReports;         //ArrayList<Report> arrayOfReports = Report.getReports();
+        ArrayList<Report> arrayOfReports = PatientLoginActivity.current;         //ArrayList<Report> arrayOfReports = Report.getReports();
 
 
         // Create the adapter to convert the array to views

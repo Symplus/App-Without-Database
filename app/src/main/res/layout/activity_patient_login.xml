@@ -25,12 +25,12 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="existingPatient"
         android:text="@string/existing_patient"
         android:id="@+id/ExistingPatientButton"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:background="@color/Patient_base"
-        android:clickable="false"
         android:elegantTextHeight="false"
         android:textColor="#ffffffff"
         android:padding="@dimen/activity_horizontal_margin" />
