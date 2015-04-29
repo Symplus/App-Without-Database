@@ -8,8 +8,9 @@ import java.util.ArrayList;
 
 public class Patient {
 
-    public String name, dob, emailAddress, docID, password = ""; //basic info for a patient, results has not been implemented yet
+    public String name, dob, emailAddress, password = ""; //basic info for a patient, results has not been implemented yet
     static ArrayList<Patient> patients;
+    int docID= 0;
 
 
     public Patient(String n, String birth, String email, String pass) //DocId not provided
@@ -25,7 +26,7 @@ public class Patient {
     {
         name = n;
         dob = birth;
-        docID = doc;
+        docID = Integer.parseInt(doc);
         emailAddress = email;
         password = pass;
 

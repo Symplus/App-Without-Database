@@ -63,6 +63,7 @@ public class CreateDoctorUI extends ActionBarActivity{
 
         DoctorLoginActivity.currentID = doctor.id;
         Doctor.addDoctor(doctor);
+        DoctorLoginActivity.currentDoctor = doctor;
         startActivity(intent);
     }
 }

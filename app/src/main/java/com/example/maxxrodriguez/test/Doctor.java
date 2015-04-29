@@ -30,6 +30,7 @@ public class Doctor {
         }*/
 
     }
+    public Doctor(){}
 
     public static void initListDoctor()
     {

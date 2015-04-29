@@ -64,6 +64,7 @@ public class ExistingDoctorUI extends ActionBarActivity {
                         {
                             PatientLoginActivity.current = MainActivity.PatientMap.get(Patient.patients.get(i));
                         }*/
+                        DoctorLoginActivity.currentDoctor = Doctor.doctors.get(i);
                         DoctorLoginActivity.currentID = Doctor.doctors.get(i).id;
                         Intent intent = new Intent(this, DoctorHomePageActivity.class);
                         startActivity(intent);

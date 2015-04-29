@@ -22,6 +22,7 @@ import java.util.ArrayList;
 public class DoctorHomePageActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
 
     ArrayList<Patient> arrayOfPatients;
+    ArrayList<Patient> filteredPatients;
     static ArrayList<Report> currentReports;
     TextView doctor_id;
 
@@ -34,9 +35,18 @@ public class DoctorHomePageActivity extends ActionBarActivity implements Adapter
         init();
 
         // Construct the data source
-
+        if(arrayOfPatients.size() != 0)
+        {
+            for(int i = 0; i <arrayOfPatients.size(); i++)
+            {
+                   if(DoctorLoginActivity.currentDoctor.id == arrayOfPatients.get(i).docID)
+                   {
+                        filteredPatients.add(arrayOfPatients.get(i));
+                   }
+            }
+        }
         // Create the adapter to convert the array to views
-        PatientsAdapter adapter = new PatientsAdapter(this, arrayOfPatients);
+        PatientsAdapter adapter = new PatientsAdapter(this, filteredPatients);
         // Attach the adapter to a ListView
         ListView listView1 = (ListView)findViewById(R.id.listView);
         listView1.setAdapter(adapter);
@@ -75,9 +85,9 @@ public class DoctorHomePageActivity extends ActionBarActivity implements Adapter
 
         Intent intent = new Intent(this,patient_reports.class);
 
-        if(MainActivity.PatientMap.containsKey(arrayOfPatients.get(position)))
+        if(MainActivity.PatientMap.containsKey(filteredPatients.get(position)))
         {
-            currentReports = MainActivity.PatientMap.get(arrayOfPatients.get(position));
+            currentReports = MainActivity.PatientMap.get(filteredPatients.get(position));
         }
 
         startActivity(intent);
@@ -86,6 +96,7 @@ public class DoctorHomePageActivity extends ActionBarActivity implements Adapter
     public void init()
     {
         arrayOfPatients = Patient.getPatients();
+        filteredPatients = new ArrayList<Patient>();
         currentReports = new ArrayList<Report>();
     }
 

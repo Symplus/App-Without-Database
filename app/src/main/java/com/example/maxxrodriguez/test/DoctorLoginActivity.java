@@ -17,6 +17,7 @@ import java.util.ArrayList;
 public class DoctorLoginActivity extends ActionBarActivity{
 
     static int currentID;
+    static Doctor currentDoctor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +64,7 @@ public class DoctorLoginActivity extends ActionBarActivity{
 
     public void init()
     {
+        currentDoctor = new Doctor();
         currentID = 0;
     }
 }

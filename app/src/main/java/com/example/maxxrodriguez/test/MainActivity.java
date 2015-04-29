@@ -2,6 +2,7 @@ package com.example.maxxrodriguez.test;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.PathEffect;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -17,7 +18,7 @@ import java.util.Map;
 public class MainActivity extends ActionBarActivity{
 
     public static Map<Patient,ArrayList<Report>> PatientMap; //will have patients and their reports
-    public static Map<Doctor,ArrayList<Patient> DoctorMap; // will have doctors and patient names
+    public static Map<Doctor,ArrayList<Patient>> DoctorMap; // will have doctors and patient names
 
 
     @Override
@@ -45,11 +46,16 @@ public class MainActivity extends ActionBarActivity{
     public void mapInit()
     {
         PatientMap = new HashMap<Patient,ArrayList<Report>>(); //will have patients and their reports
-        DoctorMap = new HashMap<Doctor,String>(); // will have doctors and patient names
+        DoctorMap = new HashMap<Doctor,ArrayList<Patient>>(); // will have doctors and patient names
 
     }
     public static void addToPatientMap(Patient patient, ArrayList<Report> reports)
     {
         PatientMap.put(patient,reports);
+    }
+
+    public static void addToDoctorMap(Doctor doctor, ArrayList<Patient> patients)
+    {
+        DoctorMap.put(doctor,patients);
     }
 }
