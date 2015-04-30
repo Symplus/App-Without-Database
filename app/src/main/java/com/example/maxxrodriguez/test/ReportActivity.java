@@ -133,7 +133,7 @@ public class ReportActivity extends ActionBarActivity {
     }
 
 
-    public void activityFinish(View view)
+    public void activityFinish(View view) //finish the report screen
     {
         Intent intent = new Intent(this, PatientHomePageActivity.class);
         Report newReport = new Report( progress1, progress2, progress3, progress4);
