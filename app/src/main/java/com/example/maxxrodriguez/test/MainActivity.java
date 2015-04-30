@@ -17,7 +17,7 @@ import java.util.Map;
 
 public class MainActivity extends ActionBarActivity{
 
-    public static Map<Patient,ArrayList<Report>> PatientMap; //will have patients and their reports
+    public static Map<Patient,ArrayList<Report>> PatientMap; //will have patients and their reports; set up at the main screen to keep the data alive
     public static Map<Doctor,ArrayList<Patient>> DoctorMap; // will have doctors and patient names
 
 
@@ -51,11 +51,11 @@ public class MainActivity extends ActionBarActivity{
     }
     public static void addToPatientMap(Patient patient, ArrayList<Report> reports)
     {
-        PatientMap.put(patient,reports);
+        PatientMap.put(patient,reports); // adder for patient map
     }
 
     public static void addToDoctorMap(Doctor doctor, ArrayList<Patient> patients)
     {
-        DoctorMap.put(doctor,patients);
+        DoctorMap.put(doctor,patients); //adder for doctor map
     }
 }
