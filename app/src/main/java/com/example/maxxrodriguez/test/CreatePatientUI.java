@@ -49,8 +49,8 @@ public class CreatePatientUI extends ActionBarActivity {
         Report.initList();
 
         Intent intent = new Intent(this, PatientHomePageActivity.class); //All of this code extracts the data the user will write in the text fields
-        EditText editText = (EditText) findViewById(R.id.FnLtext);
-        String name = editText.getText().toString();
+        EditText editText = (EditText) findViewById(R.id.FnLtext); //Edit texts gets the text that the user writes in these boxes.
+        String name = editText.getText().toString(); //take the string thats in the text bov and put it in a string
 
         EditText editText2 = (EditText) findViewById(R.id.dobText);
         String dob = editText2.getText().toString();
@@ -65,14 +65,14 @@ public class CreatePatientUI extends ActionBarActivity {
         String password = editText5.getText().toString();
 
 
-        Patient newPatient = new Patient(name,dob,docID,email,password);
+        Patient newPatient = new Patient(name,dob,docID,email,password); // once all data is captured we create a newPatient object and then add it to the patient array list
 
         Patient.addPatient(newPatient);
 
-        patientReports = Report.getReports();
-        MainActivity.addToPatientMap(newPatient,patientReports);
+        patientReports = Report.getReports(); //the reports for the patient
+        MainActivity.addToPatientMap(newPatient,patientReports); //add the patient and their corresponding reports to the map
 
-        finish();
-        startActivity(intent);
+        finish(); //kill this activity
+        startActivity(intent); //start up the next activity
     }
 }
