@@ -137,9 +137,9 @@ public class ReportActivity extends ActionBarActivity {
     {
         Intent intent = new Intent(this, PatientHomePageActivity.class);// new intent for the next activity
         Report newReport = new Report( progress1, progress2, progress3, progress4); //new report object
-        Report.addReport(newReport,CreatePatientUI.patientReports);
-        PatientLoginActivity.current = CreatePatientUI.patientReports;
-        finish();
-        startActivity(intent);
+        Report.addReport(newReport,CreatePatientUI.patientReports); //adds the new report to the concurrent report list
+        PatientLoginActivity.current = CreatePatientUI.patientReports; //set the current patient reports to the patient reports that are currently being worked with
+        finish(); //kill this current activity
+        startActivity(intent); //move to the next activity
     }
 }
