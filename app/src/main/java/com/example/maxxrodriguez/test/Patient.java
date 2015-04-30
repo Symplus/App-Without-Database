@@ -19,6 +19,7 @@ public class Patient {
         dob = birth;
         emailAddress = email;
         password = pass;
+        docID = 0;
 
     }
 

@@ -36,12 +36,12 @@ public class ReportActivity extends ActionBarActivity {
         initializeVariables();
         // Initialize the textview with '0'
 
-        textView1.setText("Pain Level: " + seekBar1.getProgress());
+        textView1.setText("Pain Level: " + seekBar1.getProgress()); //these settext assignments show the the current number that the slider is on
         textView2.setText("Pain Level: " + seekBar2.getProgress());
         textView3.setText("Pain Level: " + seekBar3.getProgress());
         textView4.setText("Pain Level: " + seekBar4.getProgress());
 
-        seekBar1.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
+        seekBar1.setOnSeekBarChangeListener(new OnSeekBarChangeListener() { //
             @Override
             public void onProgressChanged(SeekBar seekBar, int progressValue, boolean fromUser) {
                 progress1 = progressValue;

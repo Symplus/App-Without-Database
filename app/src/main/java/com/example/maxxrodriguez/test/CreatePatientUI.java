@@ -64,6 +64,7 @@ public class CreatePatientUI extends ActionBarActivity {
         EditText editText5 = (EditText) findViewById(R.id.passwordText);
         String password = editText5.getText().toString();
 
+
         Patient newPatient = new Patient(name,dob,docID,email,password);
 
         Patient.addPatient(newPatient);
