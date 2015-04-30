@@ -19,14 +19,13 @@ public class PatientHomePageActivity extends ActionBarActivity {
         setContentView(R.layout.activity_patient_home_page);
 
         // Construct the data source
-        ArrayList<Report> arrayOfReports = PatientLoginActivity.current;         //ArrayList<Report> arrayOfReports = Report.getReports();
-
+        ArrayList<Report> arrayOfReports = PatientLoginActivity.current; // set the current patient reports to be converted and shown through the list view
 
         // Create the adapter to convert the array to views
-        ReportsAdapter adapter = new ReportsAdapter(this, arrayOfReports);
+        ReportsAdapter adapter = new ReportsAdapter(this, arrayOfReports); // the adapter allows the view to be converted to the list view
         // Attach the adapter to a ListView
         ListView listView2 = (ListView)findViewById(R.id.listView2);
-        listView2.setAdapter(adapter);
+        listView2.setAdapter(adapter); // set the list view with the adapter
 
 
     }
@@ -56,9 +55,9 @@ public class PatientHomePageActivity extends ActionBarActivity {
 
     public void report(View view)
     {
-        Intent intent = new Intent(this, ReportActivity.class);
-        startActivityForResult(intent,1);
-        finish();
+        Intent intent = new Intent(this, ReportActivity.class); //create the next activity to be shown next
+        startActivityForResult(intent,1); // start next activity
+        finish(); //kill current activity
     }
 
     //@Override
