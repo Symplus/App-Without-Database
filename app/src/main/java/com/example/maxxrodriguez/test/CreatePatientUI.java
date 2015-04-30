@@ -17,7 +17,7 @@ public class CreatePatientUI extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState); //sets up the view for the createpatient ui
         setContentView(R.layout.activity_create_patient_ui);
 
     }
