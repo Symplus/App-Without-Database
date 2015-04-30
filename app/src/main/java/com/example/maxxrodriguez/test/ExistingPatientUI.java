@@ -46,19 +46,19 @@ public class ExistingPatientUI extends ActionBarActivity {
 
     public void loginPatient(View v )
     {
-        EditText editText1 = (EditText) findViewById(R.id.existingName);
-        EditText editText2 = (EditText) findViewById(R.id.existingPassword);
+        EditText editText1 = (EditText) findViewById(R.id.existingName); //gets the name from the textbox 
+        EditText editText2 = (EditText) findViewById(R.id.existingPassword); //gets the password from the text box
 
         String name = editText1.getText().toString();
         String password = editText2.getText().toString();
 
-        if(Patient.patients.size() == 0)
+        if(Patient.patients.size() == 0) // if the patient array list is 0 show a mesaage on the screen and do not let them log in
         {
             Toast.makeText(getApplicationContext(), "Name and/or Password is Incorrect ", Toast.LENGTH_LONG).show();
         }
-        else
+        else // else loop through the list and search for the patient object
         {
-            for(int i = 0; i < Patient.patients.size(); i++)
+            for(int i = 0; i < Patient.patients.size(); i++) // 
             {
                 if(name.compareTo(Patient.patients.get(i).name) == 0 )
                 {
@@ -73,7 +73,7 @@ public class ExistingPatientUI extends ActionBarActivity {
                         startActivity(intent);
                         finish();
                     }
-                    else
+                    else //if the patient object not found send a messagte to the user
                     {
                         Toast.makeText(getApplicationContext(), "Name and/or Password is Incorrect ", Toast.LENGTH_LONG).show();
                     }
