@@ -41,7 +41,7 @@ public class ReportActivity extends ActionBarActivity {
         textView3.setText("Pain Level: " + seekBar3.getProgress());
         textView4.setText("Pain Level: " + seekBar4.getProgress());
 
-        seekBar1.setOnSeekBarChangeListener(new OnSeekBarChangeListener() { //
+        seekBar1.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progressValue, boolean fromUser) {
                 progress1 = progressValue;
@@ -97,7 +97,7 @@ public class ReportActivity extends ActionBarActivity {
             }
         });
     }
-    private void initializeVariables() {
+    private void initializeVariables() { //variable initialization for the textviews and the sliders
         seekBar1 = (SeekBar) findViewById(R.id.seekBar);
         seekBar2 = (SeekBar) findViewById(R.id.seekBar2);
         seekBar3 = (SeekBar) findViewById(R.id.seekBar3);
